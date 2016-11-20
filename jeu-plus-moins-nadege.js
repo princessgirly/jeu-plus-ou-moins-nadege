@@ -43,6 +43,7 @@ console.log("Perdu ! Les 6 coups sont utilisés,la solution était " + solution)
 
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Autres solutions
 
@@ -77,6 +78,7 @@ if (choix===solution) {
 }
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 Autres solutions 
@@ -111,3 +113,35 @@ do {
     }
 } while (cont);
 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Autre solution
+
+console.log("Bienvenue dans ce jeu de devinette !");
+
+// Cette ligne génère aléatoirement un nombre entre 1 et 100
+var solution = Math.floor(Math.random() * 100) + 1;
+
+// Décommentez temporairement cette ligne pour mieux vérifier le programme
+console.log("(La solution est " + solution + ")");
+
+// TODO : complétez le programme
+
+for (var i = 1; (i <= 6); i++) {					// i : étant le nombre d'essai (oui merci on peut le nommée "var essai")
+	var valeur = Number(prompt("Entrez un nombre entre 1 et 100 ?"));
+		if (valeur < solution) {
+			console.log(valeur + " est trop petit");
+		}
+		else if (valeur > solution) {
+			console.log(valeur + " est trop grand");
+		}
+		else {
+			console.log("Bravo ! La solution était " + solution);
+			console.log("Vous avez trouvé en " + i + " essai(s)")
+			i = 7;
+		}
+}
+
+if ((i = 6) && (valeur !== solution)) {
+	console.log("Perdu... La solution était " + solution);
+}
